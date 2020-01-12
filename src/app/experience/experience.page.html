@@ -1,0 +1,114 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      Experience
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+
+  <ion-card *ngFor="let data of experience; let i of index" (click)="goExperience(i)">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="4">
+          <ion-card-content>
+            <div class="img-holder">
+              <img src="{{data.Image}}" alt="{{data.Company}}">
+            </div>
+          </ion-card-content>
+        </ion-col>
+        <ion-col size="8">
+          <ion-card-header>
+            <ion-card-title>
+              {{data.Position}}
+            </ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            {{data.JobDescription}}
+          </ion-card-content>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+
+
+  <!-- <ion-card>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="4">
+          <ion-card-content>
+            <div class="img-holder">
+              <img src="https://cdn.techinasia.com/data/images/MkYtZebRBJWIBXeXobBm6kXnjtOsVUHd6SmoXy7r.png" alt="Accenture">
+            </div>
+          </ion-card-content>
+        </ion-col>
+        <ion-col size="8">
+          <ion-card-header>
+            <ion-card-title>
+              Software Engineer
+            </ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            Handled project for Replatform
+          </ion-card-content>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+
+  <ion-card>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="4">
+          <ion-card-content>
+            <div class="img-holder">
+              <img src="https://sortlist.gumlet.com/sortlist-core-api/9oF4LbZeP54q5mtaEp23iP9B" alt="Lion&Lion">
+            </div>
+          </ion-card-content>
+        </ion-col>
+        <ion-col size="8">
+          <ion-card-header>
+            <ion-card-title>
+              Frontend Developer
+            </ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            Working as artisan for creating website
+          </ion-card-content>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+
+  <ion-card>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="4">
+          <ion-card-content>
+            <div class="img-holder">
+              <img src="https://s3-ap-southeast-1.amazonaws.com/wobb-app/uploads/company-logo/company_logo_image/9c875261-d23f-4153-8f59-48e3cb4dc397/fiction-labs-1557727472.png" alt="Fiction Labs">
+            </div>
+          </ion-card-content>
+        </ion-col>
+        <ion-col size="8">
+          <ion-card-header>
+            <ion-card-title>
+              Application Developer
+            </ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            Developing a smart dashboard for client
+          </ion-card-content>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card> -->
+
+
+
+</ion-content>

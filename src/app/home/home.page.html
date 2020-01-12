@@ -1,14 +1,58 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Ionic Blank
+      <div class="center">
+        My Resume
+      </div>
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
-  </div>
+  <header>
+    <div class="ion-padding">
+      <div class="picture-holder">
+        <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Profile Image">
+      </div>
+    </div>
+    <div class="text-header">
+      <p class="text-title">
+        <span>Software Engineer</span> <br> at Accenture Newspage
+      </p>
+    </div>
+  </header>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Personal Information</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      <ion-row class="card-gap">
+        <ion-col size="4">Name</ion-col>
+        <ion-col size="8">{{personalInfo.NAME}}</ion-col>
+
+        <ion-col size="4">Occupation</ion-col>
+        <ion-col size="8">{{personalInfo.OCCUPATION}}</ion-col>
+
+        <ion-col size="4">Company</ion-col>
+        <ion-col size="8">{{personalInfo.COMPANY}}</ion-col>
+
+        <ion-col size="4">Experience</ion-col>
+        <ion-col size="8">{{personalInfo.EXPERIENCE}}</ion-col>
+      </ion-row>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12">
+        <div class="center">
+          <ion-button expand="block" shape="round" fill="outline" (click)="experience()">
+              Experience
+          </ion-button>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

@@ -1,1 +1,28 @@
+.picture-holder{
+    text-align: center;
+    img{
+        width: 50%;
+        height: 50%;
+        border-radius: 50%;
+    }
+}
 
+.text-header{
+    padding-bottom: 10px;
+    .text-title{
+        text-align: center;
+        font-weight: bold;
+        font-size: 17px;
+        
+        span{
+            font-size: 21px;
+        }
+    }
+}
+
+ion-card-header{
+    background-color: tomato;
+    ion-card-title{
+        color: white;
+    }
+}
