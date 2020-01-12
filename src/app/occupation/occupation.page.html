@@ -1,9 +1,34 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>occupation</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Occupation</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+  <ion-card>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="4">
+          <ion-card-content>
+            <div class="img-holder">
+              <img src="{{data.Image}}" alt="{{data.Company}}">
+            </div>
+          </ion-card-content>
+        </ion-col>
+        <ion-col size="8">
+          <ion-card-header>
+            <ion-card-title>
+              {{data.Position}}
+            </ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            {{data.JobDescription}}
+          </ion-card-content>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
 </ion-content>

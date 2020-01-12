@@ -1,17 +1,26 @@
-import { NgModule } from '@angular/core';
-import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { NgModule } from "@angular/core";
+import { PreloadAllModules, RouterModule, Routes } from "@angular/router";
+import { DataResolverService } from "./resolver/data-resolver.service";
 
 const routes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: 'home', loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)},
+  { path: "", redirectTo: "home", pathMatch: "full" },
   {
-    path: 'experience',
-    loadChildren: () => import('./experience/experience.module').then( m => m.ExperiencePageModule)
+    path: "home",
+    loadChildren: () => import("./home/home.module").then(m => m.HomePageModule)
   },
   {
-    path: 'occupation',
-    loadChildren: () => import('./occupation/occupation.module').then( m => m.OccupationPageModule)
+    path: "experience",
+    loadChildren: () =>
+      import("./experience/experience.module").then(m => m.ExperiencePageModule)
   },
+  {
+    path: "occupation/:id",
+    resolve: {
+      object: DataResolverService
+    },
+    loadChildren: () =>
+      import("./occupation/occupation.module").then(m => m.OccupationPageModule)
+  }
 ];
 
 @NgModule({
@@ -20,4 +29,4 @@ const routes: Routes = [
   ],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
