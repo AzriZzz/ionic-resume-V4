@@ -10,6 +10,7 @@ export class DataService {
 
   setData(id, data) {
     this.data[id] = data;
+    console.log("Inside service :", this.data);
   }
 
   getData(id) {

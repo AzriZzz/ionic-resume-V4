@@ -43,12 +43,10 @@ export class ExperiencePage implements OnInit {
         Year: "2017-2018"
       }
     ];
-
-    console.log(this.experience);
   }
 
-  goExperience(event) {
-    console.log(event);
+  goOccupation(event) {
+    console.log("Go to Occupation: ", event);
     this.dataService.setData(event.ID, event);
     this.router.navigateByUrl(`experience/occupation/${event.ID}`);
   }

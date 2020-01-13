@@ -15,5 +15,7 @@ export class OccupationPage implements OnInit {
     if (this.route.snapshot.data["object"]) {
       this.data = this.route.snapshot.data["object"];
     }
+
+    console.log("Inside Occupation: ", this.data);
   }
 }
