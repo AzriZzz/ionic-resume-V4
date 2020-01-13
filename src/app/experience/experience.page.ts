@@ -50,6 +50,6 @@ export class ExperiencePage implements OnInit {
   goExperience(event) {
     console.log(event);
     this.dataService.setData(event.ID, event);
-    this.router.navigateByUrl(`/occupation/${event.ID}`);
+    this.router.navigateByUrl(`experience/occupation/${event.ID}`);
   }
 }

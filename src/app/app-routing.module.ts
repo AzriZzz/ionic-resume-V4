@@ -14,7 +14,7 @@ const routes: Routes = [
       import("./experience/experience.module").then(m => m.ExperiencePageModule)
   },
   {
-    path: "occupation/:id",
+    path: "experience/occupation/:id",
     resolve: {
       object: DataResolverService
     },
